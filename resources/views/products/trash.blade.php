@@ -45,8 +45,8 @@
             <tr>
                 <td scope="row">{{$loop->index+1}}</td>
                 <td>{{$product->name}}</td>
-                <td><img src="/products/{{$product->image}}" alt="" class="rounded-circle" width="50px" height="50px"></td>
-                <td><a href="/product/{{ $product->id }}/restore" class="btn btn-warning"><i class="fa fa-undo" aria-hidden="true"></i> Restore</a>  <a href="/product/{{$product->id}}/force-delete" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a></td>
+                <td><img src="{{ url('products/' . $product->image) }}" alt="" class="rounded-circle" width="50px" height="50px"></td>
+                <td><a href="{{ url('product/' . $product->id) }}/restore" class="btn btn-warning"><i class="fa fa-undo" aria-hidden="true"></i> Restore</a>  <a href="{{ url('product/' .$product->id)}}/force-delete" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Delete</a></td>
             </tr>
             
             @endforeach

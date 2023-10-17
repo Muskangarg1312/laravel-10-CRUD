@@ -48,7 +48,7 @@
                 <tr>
                     <td scope="row">{{$loop->index+1}}</td>
                     <td>{{$product->name}}</td>
-                    <td><img src="/products/{{$product->image}}" alt="" class="rounded-circle" width="50px" height="50px"></td>
+                    <td><img src="{{ asset('products/' . $product->image) }}" alt="" class="rounded-circle" width="50px" height="50px"></td>
                     <td><a href="product/{{ $product->id }}/view" target="_blank" class="btn btn-info"><i class="fa fa-eye"></i> View</a>  <a href="product/{{ $product->id }}/edit" class="btn btn-success"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>  <a href="product/{{$product->id}}/delete" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i> Trash</a></td>
                 </tr>
                 

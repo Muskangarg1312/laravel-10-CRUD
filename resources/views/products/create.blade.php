@@ -19,7 +19,7 @@
         <div class="col-6">
             <div class="container">
                 <div class="card p-3 shadow">
-                    <form method="POST" action="/product/store" enctype="multipart/form-data">
+                    <form method="POST" action="{{ url('product/store') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group row">
                             <div class="col-sm-12">

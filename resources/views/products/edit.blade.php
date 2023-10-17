@@ -20,7 +20,7 @@
         <div class="col-6">
             <div class="container">
                 <div class="card p-3 shadow">
-                    <form method="POST" action="/product/{{$product->id}}/update" enctype="multipart/form-data">
+                    <form method="POST" action="{{ url('product/'. $product->id) }}/update" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="form-group row">

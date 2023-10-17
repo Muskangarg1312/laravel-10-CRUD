@@ -45,7 +45,7 @@ class ProductController extends Controller
         
         // upload image
         $imageName = time().'.'.$request->image->extension();
-        $request->image->move(public_path('products'), $imageName);
+        $request->image->move(base_path('products'), $imageName);
         //dd($imageName);
         
         $product = new Product();
@@ -82,7 +82,7 @@ class ProductController extends Controller
         if (isset($request->image)) {
             // upload image
             $imageName = time().'.'.$request->image->extension();
-            $request->image->move(public_path('products'), $imageName);
+            $request->image->move(base_path('products'), $imageName);
             //dd($imageName);
             $product->image = $imageName;
         }
